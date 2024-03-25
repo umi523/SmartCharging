@@ -1,0 +1,84 @@
+[
+  {
+    "id": 1,
+    "name": "Group 1",
+    "capacityInAmps": 100,
+    "chargeStations": [
+      {
+        "id": 1,
+        "name": "Charge Station 1",
+        "groupId": 1,
+        "connectors": [
+          {
+            "id": 1,
+            "maxCurrentInAmps": 20
+          },
+          {
+            "id": 2,
+            "maxCurrentInAmps": 30
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Charge Station 2",
+        "groupId": 1,
+        "connectors": [
+          {
+            "id": 3,
+            "maxCurrentInAmps": 25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Group 2",
+    "capacityInAmps": 150,
+    "chargeStations": [
+      {
+        "id": 3,
+        "name": "Charge Station 3",
+        "groupId": 2,
+        "connectors": [
+          {
+            "id": 4,
+            "maxCurrentInAmps": 40
+          },
+          {
+            "id": 5,
+            "maxCurrentInAmps": 35
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Charge Station 4",
+        "groupId": 2,
+        "connectors": [
+          {
+            "id": 6,
+            "maxCurrentInAmps": 20
+          },
+          {
+            "id": 7,
+            "maxCurrentInAmps": 25
+          },
+          {
+            "id": 8,
+            "maxCurrentInAmps": 30
+          },
+          {
+            "id": 9,
+            "maxCurrentInAmps": 35
+          },
+          {
+            "id": 10,
+            "maxCurrentInAmps": 40
+          }
+        ]
+      }
+    ]
+  }
+]
