@@ -7,7 +7,7 @@ namespace SmartChargingService.Interfaces
         Task<bool> RemoveAsync(int chargeStationId);
         Task<IEnumerable<ChargeStationViewModel>> GetAllAsync();
         Task<ChargeStationViewModel> GetByIdAsync(int chargeStationId);
-        Task<ChargeStationViewModel> AddAsync(int groupId, ChargeStationViewModel chargeStationViewModel);
+        Task<ChargeStationViewModel> AddAsync(int groupId, ChargeStationPostModel chargeStationViewModel);
         Task<ChargeStationViewModel> UpdateAsync(int chargeStationId, ChargeStationViewModel chargeStationViewModel);
     }
 }

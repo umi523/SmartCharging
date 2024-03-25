@@ -31,7 +31,7 @@ namespace SmartCharging.Controllers
         }
 
         [HttpPost("groupId")]
-        public async Task<ActionResult<ChargeStationViewModel>> AddAsync(int groupId, ChargeStationViewModel chargeStationViewModel)
+        public async Task<ActionResult<ChargeStationViewModel>> AddAsync(int groupId, ChargeStationPostModel chargeStationViewModel)
         {
             if (!ModelState.IsValid)
             {

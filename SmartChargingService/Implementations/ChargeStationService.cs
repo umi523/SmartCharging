@@ -12,8 +12,13 @@ namespace SmartChargingService.Implementations
         private readonly IUnitOfWork _unitOfWork = unitOfWork;
         private readonly IGroupService _groupService = groupService;
 
-        public async Task<ChargeStationViewModel> AddAsync(int groupId, ChargeStationViewModel chargeStation)
+        public async Task<ChargeStationViewModel> AddAsync(int groupId, ChargeStationPostModel chargeStation)
         {
+            if (chargeStation.Connectors?.Count > 5)
+            {
+                throw new ArgumentException("Charging Station can have only 5 connectors");
+            }
+
             var group = await _groupService.GetByIdAsync(groupId) ?? throw new ArgumentException("Group not found");
             var mappedConnector = _mapper.Map<ChargeStation>(chargeStation);
             mappedConnector.GroupId = groupId;

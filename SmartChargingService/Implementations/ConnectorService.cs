@@ -17,6 +17,11 @@ namespace SmartChargingService.Implementations
         public async Task<ConnectorViewModel> AddAsync(int chargeStationId, int newMaxCurrentInAmps)
         {
             var chargeStation = await _chargeStationService.GetByIdAsync(chargeStationId);
+            if (chargeStation.Connectors?.Count > 5)
+            {
+                throw new ArgumentException("Charging Station can have only 5 connectors");
+            }
+
             var connector = new Connector() { ChargeStationId = chargeStation.Id, MaxCurrentInAmps = newMaxCurrentInAmps };
             return _mapper.Map<ConnectorViewModel>(await _unitOfWork.ConnectorRepository.AddAsync(connector));
         }
